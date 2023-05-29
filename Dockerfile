@@ -1,8 +1,8 @@
-FROM python:3.7-alpine
+FROM python:3.7-slim-buster
 
 WORKDIR /
 
-RUN apk add --no-cache git bash musl-dev g++ adb
+RUN apt-get update && apt-get install git adb -y
 RUN git clone https://github.com/LmeSzinc/AzurLaneAutoScript
 
 WORKDIR /AzurLaneAutoScript
