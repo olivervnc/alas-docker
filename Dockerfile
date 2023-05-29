@@ -2,7 +2,7 @@ FROM python:3.7-slim
 
 WORKDIR /
 
-RUN apk add --no-cache git bash pkgconfig ffmpeg-libswresample ffmpeg-libswscale ffmpeg-libavfilter ffmpeg-libavutil ffmpeg-libavdevice ffmpeg-libavcodec ffmpeg-libavformat
+RUN apt-get install git bash pkgconfig -y
 
 RUN git clone https://github.com/LmeSzinc/AzurLaneAutoScript
 
