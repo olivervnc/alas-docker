@@ -2,8 +2,7 @@ FROM python:3.7-alpine
 
 WORKDIR /
 
-RUN apk add --no-cache git bash pkgconfig ffmpeg
-RUN git clone https://github.com/LmeSzinc/AzurLaneAutoScript
+RUN apk add --no-cache git bash pkgconfig ffmpeg-libswresample ffmpeg-libswscale ffmpeg-libavfilter ffmpeg-libavutil ffmpeg-libavdevice ffmpeg-libavcodec ffmpeg-libavformat
 
 WORKDIR /AzurLaneAutoScript
 
