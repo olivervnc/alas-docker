@@ -2,7 +2,7 @@ FROM python:3.7-slim
 
 WORKDIR /
 
-RUN apt-get update && apt-get install git bash pkgconfig -y
+RUN apt-get update && apt-get install git -y
 
 RUN git clone https://github.com/LmeSzinc/AzurLaneAutoScript
 
