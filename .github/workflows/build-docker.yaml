@@ -1,8 +1,8 @@
 name: Build & Publish Docker image
 
 on:
-  cron: '* * 5 * * 1'
-  workflow_dispatch:
+  - cron: '* * 5 * * 1'
+  - workflow_dispatch:
 
 jobs:
   push_to_registry:
