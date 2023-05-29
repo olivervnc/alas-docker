@@ -2,7 +2,7 @@ name: Build & Publish Docker image
 
 on:
   schedule:
-    - cron: '* * 5 * * 1'
+    - cron: "* * 5 * * 1"
   workflow_dispatch:
 
 jobs:
