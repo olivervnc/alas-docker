@@ -2,7 +2,13 @@
 
 for addr in "$@" 
 do
-adb connect $addr
+  if [[ "`adb connect $addr`" = *"connected"* ]];
+  then 
+    # echo "connected"
+  else
+    echo "failed to connect to $addr"
+    exit 1
+  fi
 done
 
 if [ "`ls -A config`" = "" ];
