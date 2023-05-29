@@ -7,9 +7,7 @@ RUN git clone https://github.com/LmeSzinc/AzurLaneAutoScript
 
 WORKDIR /AzurLaneAutoScript
 
-RUN pip install -r requirements-in.txt --prefer-binary
-RUN apk del git musl-dev g++
-
+RUN pip install -r requirements-in.txt --prefer-binary && pip cache purge
 EXPOSE 22267
 COPY entrypoint.sh ./
 ENTRYPOINT ["/bin/bash","entrypoint.sh"]
