@@ -2,7 +2,7 @@ FROM python:3.7-alpine
 
 WORKDIR /
 
-RUN apk add --no-cache git bash musl-dev g++
+RUN apk add --no-cache git bash musl-dev g++ adb
 RUN git clone https://github.com/LmeSzinc/AzurLaneAutoScript
 
 WORKDIR /AzurLaneAutoScript
