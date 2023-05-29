@@ -7,7 +7,7 @@ RUN git clone https://github.com/LmeSzinc/AzurLaneAutoScript
 
 WORKDIR /AzurLaneAutoScript
 
-RUN pip install -r requirements-in.txt
+RUN pip install -r requirements-in.txt --prefer-binary
 RUN apk del git musl-dev g++
 
 EXPOSE 22267
