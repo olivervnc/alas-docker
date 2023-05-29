@@ -39,7 +39,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          platforms: linux/amd64,linux/arm64/v8,linux/arm/v7,linux/386
+          platforms: linux/amd64,linux/386 #,linux/arm64/v8,linux/arm/v7
           push: true
           tags: olivercwy/alas:${{ steps.date.outputs.date }},olivercwy/alas:latest
           labels: ${{ steps.meta.outputs.labels }}
